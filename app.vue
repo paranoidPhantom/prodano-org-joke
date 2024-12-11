@@ -34,6 +34,16 @@ useHead({
         },
     ],
 });
+
+const loading = ref(false);
+const openLink = () => {
+    loading.value = true;
+
+    setTimeout(() => {
+        window.open(link, "_blank");
+        loading.value = false;
+    }, 1000);
+};
 </script>
 
 <template>
@@ -61,7 +71,9 @@ useHead({
                     Для просмотра результатов первого (отборочного) тура нажмите
                     на кнопку ниже
                 </p>
-                <UButton size="lg" :to="link">Посмотреть результаты</UButton>
+                <UButton size="lg" :loading="loading" @click="openLink"
+                    >Посмотреть результаты</UButton
+                >
             </UCard>
             <img
                 class="flex-shrink-0 w-full lg:w-auto"
