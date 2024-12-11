@@ -13,9 +13,24 @@ useHead({
                 "Для просмотра результатов первого (отборочного) тура нажмите на кнопку ниже",
         },
         {
+            name: "og:title",
+            content: "Результаты первого этапа - Олимпиада PROD",
+        },
+        {
+            name: "og:description",
+            content:
+                "Для просмотра результатов первого (отборочного) тура нажмите на кнопку ниже",
+        },
+        {
             name: "og:image",
             content:
-                "https://cdn.tbank.ru/static/pages/files/63590dab-5c18-499f-ba9e-438eee4d5877.webp",
+                "https://cdn.tbank.ru/static/pages/files/97254c3e-ebd3-4cf7-be9b-d3587d1d6d0f.png",
+        },
+    ],
+    link: [
+        {
+            rel: "icon",
+            href: "/icon.png",
         },
     ],
 });
