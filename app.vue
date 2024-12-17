@@ -35,12 +35,77 @@ useHead({
     ],
 });
 
+const memes = [
+    {
+        weight: 1,
+        file: "/results/jeff.mp4",
+    },
+    {
+        weight: 4,
+        file: "/results/boo.mp4",
+    },
+    {
+        weight: 4,
+        file: "/results/stick.mp4",
+    },
+    {
+        weight: 4,
+        file: "/results/closing.mp4",
+    },
+    { weight: 4, file: "/results/sound.mp4" },
+    { weight: 4, file: "/results/beer.mp4" },
+    { weight: 4, file: "/results/lmao.mp4" },
+    { weight: 4, file: "/results/gn.mp4" },
+    { weight: 4, file: "/results/poland.mp4" },
+    { weight: 4, file: "/results/race.mp4" },
+    { weight: 4, file: "/results/re.mp4" },
+    { weight: 4, file: "/results/it.MP4" },
+    { weight: 4, file: "/results/magic.MP4" },
+    { weight: 4, file: "/results/rap.mp4" },
+    { weight: 4, file: "/results/wistle.mp4" },
+    { weight: 4, file: "/results/360.mp4" },
+    { weight: 4, file: "/results/blue.MP4" },
+    { weight: 4, file: "/results/freddy.mp4" },
+    {
+        weight: 30,
+        file: "/results/rick.mp4",
+    },
+];
+
 const loading = ref(false);
-const openLink = () => {
+const state = reactive({
+    isOpen: false,
+
+    file: "",
+});
+
+const doAction = () => {
+    const totalWeight = memes.reduce((acc, meme) => acc + meme.weight, 0) + 1;
+    let random = Math.random() * totalWeight;
+    if (random < 1) {
+        window.open(link, "_blank");
+        return;
+    } else {
+        random -= 1;
+        const meme = memes.find((meme) => {
+            random -= meme.weight;
+            return random < 0;
+        });
+        if (meme) {
+            state.file = meme.file;
+        }
+    }
     loading.value = true;
 
+    if (state.file) {
+        const prefetch = document.createElement("link");
+        prefetch.rel = "prefetch";
+        prefetch.href = state.file;
+        document.head.appendChild(prefetch);
+    }
+
     setTimeout(() => {
-        window.open(link, "_blank");
+        state.isOpen = true;
         loading.value = false;
     }, 1000);
 };
@@ -71,7 +136,7 @@ const openLink = () => {
                     Для просмотра результатов первого (отборочного) тура нажмите
                     на кнопку ниже
                 </p>
-                <UButton size="lg" :loading="loading" @click="openLink"
+                <UButton size="lg" :loading="loading" @click="doAction"
                     >Посмотреть результаты</UButton
                 >
             </UCard>
@@ -81,6 +146,16 @@ const openLink = () => {
                 alt="Lotty"
             />
         </div>
+
+        <UModal v-model="state.isOpen">
+            <video
+                class="rounded-2xl"
+                :src="state.file"
+                autoplay
+                @ended="state.isOpen = false"
+            />
+        </UModal>
+
         <NuxtRouteAnnouncer />
     </div>
 </template>
