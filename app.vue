@@ -157,11 +157,18 @@ const doAction = () => {
         <UModal v-model="state.isOpen">
             <video
                 ref="video"
-                class="rounded-2xl"
+                class="rounded-lg"
                 :src="state.file"
                 autoplay
                 @ended="state.isOpen = false"
             />
+            <div class="p-2">
+                👉
+
+                <UButton size="xs" to="https://forms.gle/K1DVhe1QZ7xgBTnx7">
+                    предложить свои резы
+                </UButton>
+            </div>
         </UModal>
 
         <NuxtRouteAnnouncer />
