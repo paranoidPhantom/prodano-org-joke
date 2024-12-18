@@ -73,6 +73,7 @@ const memes = [
 ];
 
 const loading = ref(false);
+const video = ref<HTMLVideoElement | null>(null);
 const state = reactive({
     isOpen: false,
 
@@ -106,8 +107,11 @@ const doAction = () => {
 
     setTimeout(() => {
         state.isOpen = true;
+        setTimeout(() => {
+            if (video.value) video.value.play();
+        }, 10);
         loading.value = false;
-    }, 1000);
+    }, 1500);
 };
 </script>
 
@@ -149,6 +153,7 @@ const doAction = () => {
 
         <UModal v-model="state.isOpen">
             <video
+                ref="video"
                 class="rounded-2xl"
                 :src="state.file"
                 autoplay
