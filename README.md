@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# 🚀 PROOOOOD
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> Александр ШАХОВ? ПРОООООД
 
-## Setup
+## ✨ Features
 
-Make sure to install dependencies:
+- **ПРОООООД** - Blazingly fast ⚡
+- *ПРОООООД* - Incredibly lightweight 🪶
+- ***ПРОООООД*** - Enterprise-ready 🏢
+- `ПРОООООД` - Developer friendly 👩‍💻
 
-```bash
-# npm
-npm install
+## 🎯 Getting Started
 
-# pnpm
-pnpm install
+1. ПРОООООД
+2. ~~ПРОООООД~~ (Deprecated)
 
-# yarn
-yarn install
+### 🛠️ Installation
 
-# bun
-bun install
-```
+> ПРОООООД
 
-## Development Server
+## 📚 Documentation
 
-Start the development server on `http://localhost:3000`:
+### ПРОООООД
 
-```bash
-# npm
-npm run dev
+## 🌟 Special Thanks
 
-# pnpm
-pnpm dev
+- ПРОООООД <sub>Community</sub>
+- ПРОООООД <sup>Contributors</sup>
 
-# yarn
-yarn dev
+## 💖 Support
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+If you like **ПРОООООД**, give it a ⭐!
