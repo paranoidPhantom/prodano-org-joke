@@ -70,6 +70,8 @@ const memes = [
     { weight: 4, file: "/results/cuc.MP4" },
     { weight: 4, file: "/results/borya.mp4" },
     { weight: 4, file: "/results/mater.mp4" },
+    { weight: 4, file: "/results/dano1.mp4" },
+    { weight: 4, file: "/results/mayo.mp4" },
     {
         weight: 30,
         file: "/results/rick.mp4",
