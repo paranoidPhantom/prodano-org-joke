@@ -194,17 +194,17 @@ const doAction = () => {
 
 <style lang="scss">
 @font-face {
-    font-family: "dsText";
+    font-family: "Tinkoff";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("https://www.cdn-tinkoff.ru/frontend-libraries/npm/react-kit-font/1.0.0/NeueHaasUnicaW1G-Regular.woff2")
-        format("woff2");
+    src: url("/fonts/TinkoffSansText-Regular.woff2") format("woff2");
 }
 
 body {
-    font-family: "dsText", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Tinkoff", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
 
     --bg: #00402e;
     background-color: var(--bg);
