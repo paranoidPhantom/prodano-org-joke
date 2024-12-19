@@ -53,6 +53,8 @@ const memes = [
         file: "/results/closing.mp4",
     },
     { weight: 4, file: "/results/beer.mp4" },
+    { weight: 4, file: "/results/ahmed.mp4" },
+    { weight: 4, file: "/results/slavery.mp4" },
     { weight: 4, file: "/results/lmao.mp4" },
     { weight: 4, file: "/results/gn.mp4" },
     { weight: 4, file: "/results/poland.mp4" },
