@@ -79,10 +79,10 @@ const memes = [
 ];
 
 const loading = ref(false);
+const showFooter = useLocalStorage("showFooter", () => false);
 const video = ref<HTMLVideoElement | null>(null);
 const state = reactive({
     isOpen: false,
-
     file: "",
 });
 
@@ -117,6 +117,7 @@ const doAction = () => {
             if (video.value) video.value.play();
         }, 10);
         loading.value = false;
+        showFooter.value = true;
     }, 1500);
 };
 </script>
@@ -156,6 +157,19 @@ const doAction = () => {
                 alt="Lotty"
             />
         </div>
+
+        <footer
+            v-if="showFooter"
+            class="bg-tyellow-500 p-4 rounded-2xl flex items-center justify-between"
+        >
+            <p class="text-black text-opacity-50">
+                &copy; {{ new Date().getFullYear() }} -
+                <NuxtLink to="https://hudalla.dev">Андрей Худалла</NuxtLink>
+            </p>
+            <NuxtLink to="https://github.com/paranoidPhantom/proooood">
+                <UIcon class="text-black" name="mdi:github" />
+            </NuxtLink>
+        </footer>
 
         <UModal v-model="state.isOpen">
             <video
