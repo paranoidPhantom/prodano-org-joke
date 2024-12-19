@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useLocalStorage } from "@vueuse/core";
 const link = "https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/";
 
 const colorMode = useColorMode();
