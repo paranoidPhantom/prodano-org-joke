@@ -1,11 +1,12 @@
 <script lang="ts" setup>
+import { useLocalStorage } from "@vueuse/core";
 const link = "https://xn--80aabtwbbuhbiqdxddn.xn--p1ai/";
 
 const colorMode = useColorMode();
 colorMode.preference = "dark";
 
 useHead({
-    title: "Результаты первого этапа - Олимпиада PROD",
+    title: "Результаты второго этапа - Олимпиада PROD",
     meta: [
         {
             name: "description",
@@ -14,7 +15,7 @@ useHead({
         },
         {
             name: "og:title",
-            content: "Результаты первого этапа - Олимпиада PROD",
+            content: "Результаты второго этапа - Олимпиада PROD",
         },
         {
             name: "og:description",
@@ -144,7 +145,7 @@ const doAction = () => {
                     Результаты 2024/25
                 </h2>
                 <p class="text-black mb-4">
-                    Для просмотра результатов первого (отборочного) тура нажмите
+                    Для просмотра результатов второго (отборочного) тура нажмите
                     на кнопку ниже
                 </p>
                 <UButton size="lg" :loading="loading" @click="doAction"
